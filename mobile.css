@@ -37,6 +37,7 @@ letter-spacing: 1px;
 text-align: center;
 margin-top:15px;
 margin-bottom:15px;
+display: none;
 }
 
 #mobileheader {
@@ -44,7 +45,6 @@ font-family: 'Roboto Slab';
 font-size: 17px;
 font-weight: 500;
 letter-spacing: 1px;
-display: none;
 text-align: center;
 }
 
@@ -145,4 +145,9 @@ font-family: 'Squada One';
 font-size: 37px;
 font-weight: 500;
 letter-spacing: 1.8px;
+}
+
+#gif {
+border: 3px solid black;
+padding: 5px 5px 5px 5px;
 }

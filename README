@@ -1,2 +1,15 @@
 You need to be installed json-server, 'npm install -g json-server'. 
 Launch the server launch.sh or 'json-server --watch db.json'
+
+
+There is a problem with the data about work hours in db.json, there's no information about barberId, so I hardcoded that any barber works at the same time. 
+
+Given db.json contains this:
+    {
+      "id": 1,
+      "day": 1,
+      "startHour": 7,
+      "endHour": "15"
+    },
+
+So I decided that "day" is a weekday number (1-7, Monday-Sunday) and used only first 5 elements of workHours in db.json. 

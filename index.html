@@ -81,7 +81,7 @@
 		    </tr>
 		    <tr>
 		        <td>
-					<select id="barber" required="required">
+					<select id="barber" required="required" onchange="updateTime()">
 		                <option value="-1" disabled selected hidden>Select Barber</option>
 		            </select>
 		        </td>
@@ -101,7 +101,7 @@
 		    </tr>
 		    <tr>
 		        <td>
-					<input type="text" placeholder="Select Date" id="date" onfocus="(this.type='date')" required="required" />
+					<input type="text" placeholder="Select Date" id="date" onfocus="(this.type='date')" required="required"  onchange="updateTime()"/>
 		        </td>
 		        <td>
 					<select id="time" required="required">
@@ -128,7 +128,7 @@
 	<div id="success">
 	    {{ success }}
 	    <br />
-	    <img src="" />
+	    <iframe id="gif" src="https://giphy.com/embed/12H74Wtu7wBqvu" width="480" height="294" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 	</div>
 </div>
 <script type="text/javascript" src="script.js"></script>
