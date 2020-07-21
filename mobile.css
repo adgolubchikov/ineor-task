@@ -5,11 +5,13 @@ background-color: #fcf4ea;
 width: 100%;
 max-width: 1000px;
 margin: 0 auto;
-height: 80%;
 }
 
 body {
 background-color: #fcf4ea;
+text-align: center;
+margin: auto;
+padding: 15px 15px 15px 15px;
 }
 
 
@@ -49,14 +51,21 @@ text-align: center;
 #img {
 border: 3px solid black;
 padding: 5px 5px 5px 5px;
-width: 80%;
+width: 95%;
+margin-bottom: 10px;
+margin: auto;
+}
+
+td {
+display: block;
+width: 100%;
+}
+
+table {
+width: 100%
 }
 
 #form {
-z-index: 2;
-position: absolute;
-top: 35%;
-right: 10%;
 background-color: #1c2742;
 color: #ffffff;
 padding: 20px 20px 20px 20px;
@@ -87,7 +96,7 @@ padding-bottom: 10px;
 margin-top: 10px;
 }
 
-#mobilebutton {
+#fullbutton {
 display: none;
 }
 
@@ -119,14 +128,16 @@ font-weight: 500;
 letter-spacing: 0.6px;
 color: #6b6b6b;
 background-color: #ffffff;
-width: 96%;
+width: 92%;
 border-radius: 3px;
 padding: 3px 3px 3px 3px;
 margin-top:10px;
 margin-bottom:10px;
 }
 
-
+#price {
+width: 90%!important;
+}
 
 
 #success {

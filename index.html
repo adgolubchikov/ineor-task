@@ -8,7 +8,9 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<!--<link rel="stylesheet" href="style.css">-->
+<link rel="stylesheet" media="screen and (min-width: 801px)" href="style.css">
+<link rel="stylesheet" media="screen and (max-width: 800px)" href="mobile.css">
 </head>
 <body>
 <div id="app">
@@ -18,6 +20,7 @@
 		<div id="mobileheader">{{ mobileheader }}</div>
 		<br />
 		<div id="img"><img src="image.jpg" width="100%" /></div>
+		<br />
 		<div id="form">
 		<div id="formheader">{{ formheader }}</div>
 		<!--
@@ -49,10 +52,10 @@
 		<table>
 		    <tr>
 		        <td>
-					<input type="text" placeholder="First Name" id="firstname" style="float:left;" required="required" />
+					<input type="text" placeholder="First Name" id="firstname" required="required" />
 		        </td>
 		        <td>
-					<input type="text" placeholder="Last Name" id="lastname" style="float:right;" required="required" />
+					<input type="text" placeholder="Last Name" id="lastname" required="required" />
 		        </td>
 		    </tr>
 		    <tr>
@@ -62,10 +65,10 @@
 		    </tr>
 		    <tr>
 		        <td>
-					<input type="text" placeholder="Email" id="email" style="float:left;" required="required" />
+					<input type="text" placeholder="Email" id="email" required="required" />
 		        </td>
 		        <td>
-					<input type="text" placeholder="Contact Number" id="number" style="float:right;" required="required" />
+					<input type="text" placeholder="Contact Number" id="number" required="required" />
 		        </td>
 		    </tr>
 		    <tr>
@@ -78,12 +81,12 @@
 		    </tr>
 		    <tr>
 		        <td>
-					<select id="barber" style="float:left;" required="required">
+					<select id="barber" required="required">
 		                <option value="-1" disabled selected hidden>Select Barber</option>
 		            </select>
 		        </td>
 		        <td>
-					<select id="service" style="float:right;" required="required" onchange="updatePrice()">
+					<select id="service" required="required" onchange="updatePrice()">
 		                <option value="-1" disabled selected hidden>Select Service</option>
 		            </select>
 		        </td>
@@ -98,10 +101,10 @@
 		    </tr>
 		    <tr>
 		        <td>
-					<input type="text" placeholder="Select Date" id="date" onfocus="(this.type='date')" style="float:left;" required="required" />
+					<input type="text" placeholder="Select Date" id="date" onfocus="(this.type='date')" required="required" />
 		        </td>
 		        <td>
-					<select id="time" style="float:right;" required="required">
+					<select id="time" required="required">
 		                <option value="-1" disabled selected hidden>Select Time</option>
 		            </select>
 		        </td>
