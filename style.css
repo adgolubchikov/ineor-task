@@ -1,0 +1,104 @@
+#main {
+float:center;
+vertical-align:middle;
+background-color: #fcf4ea;
+width: 100%;
+height: 80%;
+}
+
+body {
+background-color: #fcf4ea;
+}
+
+
+#success {
+display: none;
+
+}
+
+#title {
+font-family: 'Squada One';
+font-size: 58px;
+font-weight: 500;
+letter-spacing: 1px;
+}
+#header {
+font-family: 'Roboto Slab';
+font-size: 17px;
+font-weight: 500;
+letter-spacing: 1px;
+}
+
+#mobileheader {
+font-family: 'Roboto Slab';
+font-size: 17px;
+font-weight: 500;
+letter-spacing: 1px;
+display: none;
+}
+
+#img {
+
+}
+#form {
+z-index: 2;
+position: absolute;
+top: 20%;
+right: 30%;
+right: 30%;
+background-color: #1c2742;
+color: #ffffff;
+}
+
+#formheader {
+font-family: 'Squada One';
+font-size: 37px;
+font-weight: 500;
+letter-spacing: 1.8px;
+}
+
+.button {
+font-family: 'Roboto Slab';
+font-size: 18px;
+font-weight: 400;
+letter-spacing: 2px;
+background-color: #fd9563;
+color: #ffffff;
+text-align: center;
+cursor: pointer;
+border-radius: 50px 50px 50px 50px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+#mobilebutton {
+display: none;
+}
+
+.tip {
+color: 
+}
+
+input {
+font-family: 'Roboto Slab';
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.6px;
+}
+
+
+#fullbutton {
+
+}
+
+#mobilebutton {
+
+}
+
+
+#success {
+font-family: 'Squada One';
+font-size: 37px;
+font-weight: 500;
+letter-spacing: 1.8px;
+}

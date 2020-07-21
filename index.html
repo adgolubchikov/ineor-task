@@ -5,17 +5,49 @@
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 <title>Barbershop</title>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="app">
-	<div id="mobile">
-	</div>
-	<div id="desktop">
+	<div id="main">
+		<div id="title">{{ title }}</div>
+		<div id="header" v-html="header"></div>
+		<div id="mobileheader">{{ mobileheader }}</div>
+		<div id="img"><img src="image.jpg" width="500" /></div>
+		<div id="form">
+		<div id="formheader">{{ formheader }}</div>
+		<input type="text" placeholder="First Name" id="firstname" style="float:left;" />
+		<input type="text" placeholder="Last Name" id="lastname" style="float:right;" />
+		<span class="tip">{{ fullname }}</span>
+		<br />
+		<input type="text" placeholder="Email" id="email" style="float:left;" />
+		<span class="tip">{{ email }}</span>
+		<input type="text" placeholder="Contact Number" id="number" style="float:right;" />
+		<span class="tip">{{ number }}</span>
+		<br />
+		<input type="text" placeholder="Select Barber" id="number" style="float:left;" />
+		<span class="tip">{{ barber }}</span>
+		<input type="text" placeholder="Select Service" id="number" style="float:right;" />
+		<span class="tip">{{ service }}</span>
+		<br />
+		<input type="text" placeholder="Select Date" onfocus="(this.type='date')" style="float:left;" />
+		<span class="tip">{{ date }}</span>
+		<input type="text" placeholder="Select Time" id="number" style="float:right;" />
+		<span class="tip">{{ time }}</span>
+		<br />
+		<input type="text" placeholder="Service Price" id="price" disabled="disabled" style="width:80%;" />
+		<span class="tip">{{ price }}</span>
+		<div class="button" id="fullbutton" onclick="validate()">BOOK APPOINTMENT</div>
+		<div class="button" id="mobilebutton" onclick="validate()">BOOK</div>
+		</div>
 	</div>
 	<div id="success">
+	    {{ success }}
+	    <br />
+	    <img src="" />
 	</div>
-{{ message }}
 </div>
 <script type="text/javascript" src="script.js"></script>
 </body>
