@@ -3,6 +3,8 @@ float:center;
 vertical-align:middle;
 background-color: #fcf4ea;
 width: 100%;
+max-width: 1000px;
+margin: 0 auto;
 height: 80%;
 }
 
@@ -13,7 +15,7 @@ background-color: #fcf4ea;
 
 #success {
 display: none;
-
+text-align: center;
 }
 
 #title {
@@ -21,12 +23,18 @@ font-family: 'Squada One';
 font-size: 58px;
 font-weight: 500;
 letter-spacing: 1px;
+text-align: center;
+margin-top:15px;
+margin-bottom:15px;
 }
 #header {
 font-family: 'Roboto Slab';
 font-size: 17px;
 font-weight: 500;
 letter-spacing: 1px;
+text-align: center;
+margin-top:15px;
+margin-bottom:15px;
 }
 
 #mobileheader {
@@ -35,17 +43,20 @@ font-size: 17px;
 font-weight: 500;
 letter-spacing: 1px;
 display: none;
+text-align: center;
 }
 
 #img {
-
+border: 3px solid black;
+padding: 5px 5px 5px 5px;
+width: 80%;
 }
+
 #form {
 z-index: 2;
 position: absolute;
-top: 20%;
-right: 30%;
-right: 30%;
+top: 35%;
+right: 10%;
 background-color: #1c2742;
 color: #ffffff;
 padding: 20px 20px 20px 20px;
@@ -56,7 +67,10 @@ font-family: 'Squada One';
 font-size: 37px;
 font-weight: 500;
 letter-spacing: 1.8px;
+margin-top:15px;
+margin-bottom:15px;
 }
+
 
 .button {
 font-family: 'Roboto Slab';
@@ -78,19 +92,21 @@ display: none;
 }
 
 .tip {
-color: #1d2741;
-font-size: 10px;
+color: #e3463f;
+font-size: 12px;
+font-weight: 600;
 }
 
-input, option, select {
+input {
 font-family: 'Roboto Slab';
 font-size: 14px;
 font-weight: 500;
 letter-spacing: 0.6px;
 color: #6b6b6b;
-width: 45%;
+width: 90%;
 padding: 3px 3px 3px 3px;
 margin-top:10px;
+margin-bottom:10px;
 }
 
 select {
@@ -103,10 +119,11 @@ font-weight: 500;
 letter-spacing: 0.6px;
 color: #6b6b6b;
 background-color: #ffffff;
-width: 48%;
+width: 96%;
 border-radius: 3px;
 padding: 3px 3px 3px 3px;
 margin-top:10px;
+margin-bottom:10px;
 }
 
 

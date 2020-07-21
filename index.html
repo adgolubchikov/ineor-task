@@ -16,9 +16,11 @@
 		<div id="title">{{ title }}</div>
 		<div id="header" v-html="header"></div>
 		<div id="mobileheader">{{ mobileheader }}</div>
-		<div id="img"><img src="image.jpg" width="500" /></div>
+		<br />
+		<div id="img"><img src="image.jpg" width="100%" /></div>
 		<div id="form">
 		<div id="formheader">{{ formheader }}</div>
+		<!--
 		<input type="text" placeholder="First Name" id="firstname" style="float:left;" required="required" />
 		<input type="text" placeholder="Last Name" id="lastname" style="float:right;" required="required" />
 		<span class="tip">{{ fullname }}</span>
@@ -43,8 +45,78 @@
 		    <option value="-1" disabled selected hidden>Select Time</option>
 		</select>
 		<span class="tip">{{ time }}</span>
+		-->
+		<table>
+		    <tr>
+		        <td>
+					<input type="text" placeholder="First Name" id="firstname" style="float:left;" required="required" />
+		        </td>
+		        <td>
+					<input type="text" placeholder="Last Name" id="lastname" style="float:right;" required="required" />
+		        </td>
+		    </tr>
+		    <tr>
+		        <td colspan="2">
+					<span class="tip">{{ fullname }}</span>
+		        </td>
+		    </tr>
+		    <tr>
+		        <td>
+					<input type="text" placeholder="Email" id="email" style="float:left;" required="required" />
+		        </td>
+		        <td>
+					<input type="text" placeholder="Contact Number" id="number" style="float:right;" required="required" />
+		        </td>
+		    </tr>
+		    <tr>
+		        <td>
+					<span class="tip">{{ email }}</span>
+		        </td>
+		        <td>
+					<span class="tip">{{ number }}</span>
+		        </td>
+		    </tr>
+		    <tr>
+		        <td>
+					<select id="barber" style="float:left;" required="required">
+		                <option value="-1" disabled selected hidden>Select Barber</option>
+		            </select>
+		        </td>
+		        <td>
+					<select id="service" style="float:right;" required="required" onchange="updatePrice()">
+		                <option value="-1" disabled selected hidden>Select Service</option>
+		            </select>
+		        </td>
+		    </tr>
+		    <tr>
+		        <td>
+					<span class="tip">{{ barber }}</span>
+		        </td>
+		        <td>
+					<span class="tip">{{ service }}</span>
+		        </td>
+		    </tr>
+		    <tr>
+		        <td>
+					<input type="text" placeholder="Select Date" id="date" onfocus="(this.type='date')" style="float:left;" required="required" />
+		        </td>
+		        <td>
+					<select id="time" style="float:right;" required="required">
+		                <option value="-1" disabled selected hidden>Select Time</option>
+		            </select>
+		        </td>
+		    </tr>
+		    <tr>
+		        <td>
+					<span class="tip">{{ date }}</span>
+		        </td>
+		        <td>
+					<span class="tip">{{ time }}</span>
+		        </td>
+		    </tr>
+		</table>
 		<br />
-		<input type="text" placeholder="Service Price" id="price" disabled="disabled" style="width:90%;" />
+		<input type="text" placeholder="Service Price" id="price" disabled="disabled" style="width:97%;" />
 		
 		<div class="button" id="fullbutton" onclick="validate()">BOOK APPOINTMENT</div>
 		<div class="button" id="mobilebutton" onclick="validate()">BOOK</div>

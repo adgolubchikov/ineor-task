@@ -56,13 +56,37 @@ function updatePrice() {
 }
 
 function validate() {
+	let errors=false;
+	if (!checkName(id('firstname').value)) { errors=true; app.fullname='Please enter your full name'; }
+	if (!checkName(id('lastname').value)) { errors=true; app.fullname='Please enter your full name'; }
+	if (!checkEmail(id('email').value)) { errors=true; app.email='Please enter a valid email'; }
+	if (!checkNumber(id('number').value)) { errors=true; app.number='Please enter phone number'; }
+	if (id('barber').value==-1) { errors=true; app.barber='Please select a barber'; }
+	if (id('service').value==-1) { errors=true; app.service='Please select a service'; }
+	if (!checkDate(id('date').value)) { errors=true; app.date='Please pick a date'; }
+	if (id('time').value==-1) { errors=true; app.time='Please pick a time'; }
 	
-	
-	
+	if (errors) return;
 	
 	let timestamp=new Date(id('date').value+'T10:00:00').getTime();
 	timestamp/=1000;
-	$.post('http://localhost:3000/appointments', { startDate: timestamp, barberId: id('barber').value, serviceId: id('service').value});
+	//$.post('http://localhost:3000/appointments', { startDate: timestamp, barberId: id('barber').value, serviceId: id('service').value});
+}
+
+function checkName(str) {
+	return false;
+}
+
+function checkEmail(str) {
+	return false;
+}
+
+function checkDate(str) {
+	return false;
+}
+
+function checkNumber(str) {
+	return false;
 }
 
 
