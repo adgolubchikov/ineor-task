@@ -19,30 +19,32 @@
 		<div id="img"><img src="image.jpg" width="500" /></div>
 		<div id="form">
 		<div id="formheader">{{ formheader }}</div>
-		<input type="text" placeholder="First Name" id="firstname" style="float:left;" />
-		<input type="text" placeholder="Last Name" id="lastname" style="float:right;" />
+		<input type="text" placeholder="First Name" id="firstname" style="float:left;" required="required" />
+		<input type="text" placeholder="Last Name" id="lastname" style="float:right;" required="required" />
 		<span class="tip">{{ fullname }}</span>
 		<br />
-		<input type="text" placeholder="Email" id="email" style="float:left;" />
+		<input type="text" placeholder="Email" id="email" style="float:left;" required="required" />
 		<span class="tip">{{ email }}</span>
-		<input type="text" placeholder="Contact Number" id="number" style="float:right;" />
+		<input type="text" placeholder="Contact Number" id="number" style="float:right;" required="required" />
 		<span class="tip">{{ number }}</span>
 		<br />
-		<select id="barber" style="float:left;">
+		<select id="barber" style="float:left;" required="required">
 		    <option value="-1" disabled selected hidden>Select Barber</option>
 		</select>
 		<span class="tip">{{ barber }}</span>
-		<select id="service" style="float:right;">
+		<select id="service" style="float:right;" required="required" onchange="updatePrice()">
 		    <option value="-1" disabled selected hidden>Select Service</option>
 		</select>
 		<span class="tip">{{ service }}</span>
 		<br />
-		<input type="text" placeholder="Select Date" onfocus="(this.type='date')" style="float:left;" />
+		<input type="text" placeholder="Select Date" id="date" onfocus="(this.type='date')" style="float:left;" required="required" />
 		<span class="tip">{{ date }}</span>
-		<input type="text" placeholder="Select Time" id="number" style="float:right;" />
+		<select id="time" style="float:right;" required="required">
+		    <option value="-1" disabled selected hidden>Select Time</option>
+		</select>
 		<span class="tip">{{ time }}</span>
 		<br />
-		<input type="text" placeholder="Service Price" id="price" disabled="disabled" style="width:80%;" />
+		<input type="text" placeholder="Service Price" id="price" disabled="disabled" style="width:90%;" />
 		
 		<div class="button" id="fullbutton" onclick="validate()">BOOK APPOINTMENT</div>
 		<div class="button" id="mobilebutton" onclick="validate()">BOOK</div>

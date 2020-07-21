@@ -18,12 +18,12 @@ let app = new Vue({
   }
 });
 
-$.getJSON('http://localhost:3000/barbers', function(data){ window.barbers=data;}).done(addbarbers);
-$.getJSON('http://localhost:3000/services', function(data){ window.services=data; }).done(addservices);
+$.getJSON('http://localhost:3000/barbers', function(data){ window.barbers=data;}).done(addBarbers);
+$.getJSON('http://localhost:3000/services', function(data){ window.services=data; }).done(addServices);
 $.getJSON('http://localhost:3000/appointments', function(data){ window.appointments=data; });
 $.getJSON('http://localhost:3000/workHours', function(data){ window.workHours=data; });
 
-function addbarbers() {
+function addBarbers() {
 	let i;
     for (i=0;i<barbers.length;i++) {
 	    let opt=document.createElement('option');
@@ -34,7 +34,7 @@ function addbarbers() {
     }
 }
 
-function addservices() {
+function addServices() {
 	let i;
     for (i=0;i<services.length;i++) {
 	    let opt=document.createElement('option');
@@ -45,9 +45,24 @@ function addservices() {
     }
 }
 
+function updatePrice() {
+	let priceId=id('service').value;
+	
+	if (priceId==-1) id('price').value='';
+	
+	for (let i=0;i<services.length;i++) {
+		if (priceId==services[i].id) id('price').value=services[i].price+' EUR';
+	}
+}
 
 function validate() {
 	
+	
+	
+	
+	let timestamp=new Date(id('date').value+'T10:00:00').getTime();
+	timestamp/=1000;
+	$.post('http://localhost:3000/appointments', { startDate: timestamp, barberId: id('barber').value, serviceId: id('service').value});
 }
 
 
